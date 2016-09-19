@@ -19,5 +19,5 @@ app.get('/ui/madi.png',function(req,res){
 
 var port = 8080;
 app.listen(8080, function () {
-    console.log('IMAD couse app listening on port ${port}');
+    console.log('IMAD couse app listening on port ${port}!');
 });
