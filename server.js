@@ -10,7 +10,7 @@
      });
      
      app.get('/article-one',function(req,res){
-         res.send('Article one req');
+         res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
      });
      
      app.get('/article-two',function(req,res){
