@@ -5,8 +5,8 @@
      var app = express();
      app.use(morgan('combined'));
      
-     
-     var articleone = {
+     var articles = {
+       'article-one' : {
          title:'article-one',
          heading:'article-one',
          date:'oct 9 2016',
@@ -21,6 +21,38 @@
                         This is first time in html.  This is first  in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is 
                     </p>`
          
+     },
+       'article-two':{ 
+         title:'article-two',
+         heading:'article-two',
+         date:'oct 9 2016',
+         content:` <p>
+                       This is first time in html.  This is first  in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is
+                    </p>
+                    <p>
+                       This is first time in html.  This is first  in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is 
+        
+                    </p>
+                    <p>
+                        This is first time in html.  This is first  in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is 
+                    </p>`
+         },
+       'article-three':{
+          title:'article-three',
+         heading:'article-three',
+         date:'oct 9 2016',
+         content:` <p>
+                       This is first time in html.  This is first  in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is
+                    </p>
+                    <p>
+                       This is first time in html.  This is first  in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is 
+        
+                    </p>
+                    <p>
+                        This is first time in html.  This is first  in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is first time in html.  This is 
+                    </p>`
+         
+     }
      };
      function createTemplate(data){
          var title= data.title;
@@ -64,8 +96,9 @@
        res.sendFile(path.join(__dirname, 'ui', 'index.html'));
      });
      
-     app.get('/article-one',function(req,res){
-         res.send(createTemplate(articleone));
+     app.get('/:articleName',function(req,res){
+         var articleName = req.params.articleName;
+         res.send(createTemplate(articles[articleName]));
      });
      
      app.get('/article-two',function(req,res){
