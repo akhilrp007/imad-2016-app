@@ -47,10 +47,10 @@
                        ${heading}
                     </h3>
                     <div>
-                        $(date)
+                        ${date}
                     </div>
                     <div>
-                        $(content)
+                        ${content}
                     </div>
                 </div>
         </body>
