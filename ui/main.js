@@ -13,4 +13,4 @@ element.innerHTML='New ca';
  }
  img.onclick=function(){
      var interval = setInterval(moveRight,100);
- }
+ };
