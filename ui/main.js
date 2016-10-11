@@ -1,7 +1,7 @@
 var button = document.getElementById('counter');
 button.onclick = function() {
     
-    //make reqst to counter end point
+    //create request
     var request = new XMLHttpRequest();
     
     
@@ -19,7 +19,9 @@ button.onclick = function() {
       }
   };
     
-    
+    //make request
+    request.open('GET','http://akhilrp007.imad.hasura-app.io/',true);
+    request.send(null);
     
  
   
