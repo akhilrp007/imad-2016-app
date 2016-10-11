@@ -8,7 +8,7 @@ element.innerHTML='New ca';
  var img = document.getElementById('madi');
  var marginleft=0;
  function mvright(){
-     marginleft=marginleft+10;
+     marginleft=marginleft+1220;
      img.style.marginleft=marginleft+'px';
  }
  img.onclick=function(){
