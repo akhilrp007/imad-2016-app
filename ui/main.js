@@ -6,12 +6,12 @@ element.innerHTML='New ca';
  var img = document.getElementById('main');
  
  var img = document.getElementById('madi');
-// var marginleft=0;
-// function moveRight(){
-  //   marginleft=marginleft+1220;
-  //   img.style.marginleft=marginleft+'px';
-// }
+ var marginLeft=0;
+function moveRight(){
+     marginLeft=marginLeft+10;
+     img.style.marginLeft=marginLeft+'px';
+ }
  img.onclick=function(){
-     img.style.marginLeft='100px';
-     //var interval = setInterval(moveRight,100);
+     //img.style.marginLeft='100px';
+     var interval = setInterval(moveRight,100);
  };
