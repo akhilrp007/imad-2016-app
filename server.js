@@ -130,6 +130,7 @@
        res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
      });
      
+     var names = [];
      app.get('/submit-name/:name', function (req,res){
          var name = req.params.name;
          names.push(name);
