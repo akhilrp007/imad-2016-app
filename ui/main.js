@@ -12,5 +12,5 @@ element.innerHTML='New ca';
      img.style.marginleft=marginleft+'px';
  }
  img.onclick=function(){
-     var interval = setInterval(moveRight,100);
+     var interval = setInterval(mvright,100);
  }
