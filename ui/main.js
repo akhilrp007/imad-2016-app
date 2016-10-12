@@ -57,6 +57,8 @@ submit.onclick=function()
   };
     
     //make request
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     request.open('GET','http://akhilrp007.imad.hasura-app.io/submit-name?name='+name,true);
     request.send(null);
    
