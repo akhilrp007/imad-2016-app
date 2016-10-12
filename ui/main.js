@@ -48,9 +48,7 @@ submit.onclick=function()
                 }
                 var ul=document.getElementById('namelist');
                 ul.innerHTML = list;
-              var counter = request.responseText;
-              var span = document.getElementById('count');
-              span.innerHTML = counter.toString();
+             
           }
       }
   };
